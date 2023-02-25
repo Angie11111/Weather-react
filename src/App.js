@@ -1,27 +1,34 @@
-import logo from "./logo.svg";
+import React from "react";
+import Weather from "./Weather";
 import "./App.css";
-import WeatherSearch from "./WeatherSearch";
-import Search from "./Search";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <div className="container">
+        <Weather defaultCity="Paris" />
 
-        <h1>
-          {" "}
-          <Search />
-        </h1>
-        <WeatherSearch city="Lisbon" />
-        <p>Coded by Angie</p>
-        <a href="https://github.com/Angie11111/Weather-react">
-          {" "}
-          Open coded source
-        </a>
-      </header>
+        <footer>
+          This project was coded by Angie and is{" "}
+          <a
+            href="https://github.com/Angie11111/Weather-react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open-sourced on GitHub
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://reliable-strudel-5dab4b.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hosted on Netlify
+          </a>
+        </footer>
+      </div>
     </div>
   );
 }
 
-export default App;
+
